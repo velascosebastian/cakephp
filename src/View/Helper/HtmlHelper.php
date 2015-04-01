@@ -1123,13 +1123,13 @@ class HtmlHelper extends Helper
      * - `even` - Class to use for even rows.
      * - `odd` - Class to use for odd rows.
      *
-     * @param array $list Set of elements to list
+     * @param array|\Traversable $list Set of elements to list
      * @param array $options Options and additional HTML attributes of the list (ol/ul) tag.
      * @param array $itemOptions Options and additional HTML attributes of the list item (LI) tag.
      * @return string The nested list
      * @link http://book.cakephp.org/3.0/en/views/helpers/html.html#creating-nested-lists
      */
-    public function nestedList(array $list, array $options = [], array $itemOptions = [])
+    public function nestedList($list, array $options = [], array $itemOptions = [])
     {
         $options += ['tag' => 'ul'];
         $items = $this->_nestedListItem($list, $options, $itemOptions);
